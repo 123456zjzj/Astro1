@@ -1,0 +1,177 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阿比西尼亚猫介绍</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>猫咪品种介绍</h1>
+        <nav>
+            <ul>
+                <li><a href="/">首页</a></li>
+                <li><a href="/abyssinian/" class="active">品种介绍</a></li>
+                <li><a href="/blog">日常护理</a></li>
+                <li><a href="/notes/">健康指南</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="cat-introduction">
+        <section class="cat-details">
+            <h2>阿比西尼亚猫</h2>
+            <div class="content-wrapper">
+                <div class="cat-image-column">
+                    <img src="https://img.zcool.cn/community/0104e85ba498a8a8012099c8ef144e.jpg@1280w_1l_2o_100sh.jpg" alt="阿比西尼亚猫1" />
+                    <img src="https://tse1-mm.cn.bing.net/th/id/OIP-C.T2-L2_UyFTKFLzfxSKw89QHaE7?rs=1&pid=ImgDetMain" alt="阿比西尼亚猫2" />
+                    <img src="https://img.zcool.cn/community/01952060b09bd411013eaf705f8d8b.jpg@1280w_1l_2o_100sh.jpg" alt="阿比西尼亚猫3" />
+                    <!-- 更多图片 -->
+                </div>
+                <div class="cat-text-column">
+                    <h3>基本信息</h3>
+                    <p>阿比西尼亚猫是一种优雅、活泼的猫种，以其独特的"虎斑"条纹和大耳朵而闻名。它们原产于埃塞俄比亚，被认为是最古老的猫种之一。</p>
+                    
+                    <h3>性格特征</h3>
+                    <p>阿比西尼亚猫非常聪明、好奇，喜欢攀爬和探索。它们对家庭成员非常忠诚，喜欢与人互动，但可能对陌生人有所保留。</p>
+                    
+                    <h3>护理需求</h3>
+                    <p>阿比西尼亚猫的短毛需要定期的梳理以保持光泽。由于它们活跃的天性，需要提供足够的运动空间和玩具来满足它们的活动需求。</p>
+                    
+                    <h3>健康问题</h3>
+                    <p>阿比西尼亚猫通常健康状况良好，但也可能遗传一些健康问题。定期的兽医检查可以帮助监测和预防潜在的健康问题。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 猫咪爱好者社区</p>
+    </footer>
+</body>
+</html>
+<style>
+ /* 全局样式 */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5; /* 浅灰背景 */
+    color: #3d3d3d; /* 深灰文字 */
+}
+
+/* 头部样式 */
+header {
+    background: #fdebd0; /* 莫兰迪黄棕色 */
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 导航样式 */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 0.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: #5b4c49; /* 深棕色文字 */
+    transition: background-color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    background-color: #d9c2a5; /* 较深的莫兰迪黄棕色 */
+}
+
+/* 主要内容区域 */
+.cat-introduction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    min-height: calc(100vh - 112px); /* 根据需要调整 */
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cat-image-column, .cat-text-column {
+    flex: 1;
+    min-width: 300px; /* 设置最小宽度 */
+}
+
+.cat-image-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.cat-image-column img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.cat-text-column {
+    flex: 2; /* 文字列比图片列宽 */
+    padding: 0 20px;
+}
+
+.cat-text-column h2, .cat-text-column h3 {
+    color: #5b4c49;
+    margin-bottom: 0.5rem;
+}
+
+.cat-text-column p {
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+/* 页脚样式 */
+footer {
+    background: #5b4c49; /* 深棕色背景 */
+    color: #fdebd0; /* 黄棕色文字 */
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cat-image-column, .cat-text-column {
+        min-width: auto;
+        width: 100%;
+    }
+
+    .cat-text-column {
+        padding: 0;
+    }
+}   
+</style>

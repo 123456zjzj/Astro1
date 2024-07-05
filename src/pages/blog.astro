@@ -1,0 +1,147 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猫咪日常护理 - 养猫小知识</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>猫咪日常护理</h1>
+    </header>
+    <nav>
+        <a href="/">首页</a>
+        <a href="/about/">品种介绍</a>
+        <a href="/blog" class="active">日常护理</a>
+        <a href="/notes/">健康指南</a>
+    </nav>
+    <main>
+        <section id="feeding">
+            <h2>喂食指南</h2>
+            <p>提供新鲜、营养均衡的猫粮，定时定量喂食。</p>
+            <!-- 更多喂食相关内容 -->
+        </section>
+        <section id="grooming">
+            <h2>梳毛与清洁</h2>
+            <p>定期为猫咪梳毛，保持毛发清洁，预防毛球问题。</p>
+            <!-- 更多梳毛与清洁相关内容 -->
+        </section>
+        <section id="health-check">
+            <h2>健康检查</h2>
+            <p>定期带猫咪去兽医处接受健康检查，确保健康。</p>
+            <!-- 更多健康检查相关内容 -->
+        </section>
+        <!-- 更多日常护理相关内容 -->
+    </main>
+    <footer>
+        <p>&copy; 2024 猫咪爱好者社区</p>
+    </footer>
+</body>
+</html>
+<style>
+ /* 全局样式 */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #f5f5f5; /* 浅灰背景 */
+    color: #3d3d3d; /* 深灰文字 */
+}
+
+/* 头部样式 */
+header {
+    background: #fdebd0; /* 莫兰迪黄棕色 */
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    color: #5b4c49; /* 深棕色文字 */
+}
+
+/* 导航样式 */
+nav {
+    background: #fdebd0; /* 与头部背景一致 */
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+nav a {
+    color: #5b4c49; /* 深棕色文字 */
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 5px; /* 圆角边框 */
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    background-color: #d9c2a5; /* 较深的莫兰迪黄棕色 */
+    border: 1px solid #5b4c49; /* 深棕色边框 */
+}
+
+/* 主要内容区域 */
+main {
+    padding: 2rem;
+    flex: 1; /* 主内容区域占据剩余空间 */
+}
+
+/* 各部分样式 */
+main section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #fff; /* 白色背景 */
+    border: 1px solid #5b4c49; /* 深棕色边框 */
+    border-radius: 8px; /* 圆角边框 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 轻微阴影 */
+}
+
+main section h2 {
+    color: #5b4c49; /* 深棕色标题 */
+    margin-bottom: 10px;
+}
+
+main section p {
+    text-align: justify; /* 文本两端对齐 */
+}
+
+/* 页脚样式 */
+footer {
+    background: #5b4c49; /* 深棕色背景 */
+    color: #fdebd0; /* 黄棕色文字 */
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    nav a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    main section {
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+}
+  </style>

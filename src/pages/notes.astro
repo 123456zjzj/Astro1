@@ -1,0 +1,187 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猫咪健康指南 - 养猫小知识</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>猫咪健康指南</h1>
+    </header>
+    <nav>
+        <a href="/">首页</a>
+        <a href="/about/">品种介绍</a>
+        <a href="/blog">日常护理</a>
+        <a href="/notes/" class="active">健康指南</a>
+    </nav>
+    <main>
+        <section id="preventive-care">
+            <h2>预防性护理</h2>
+            <p>定期给猫咪接种疫苗，进行驱虫处理，预防疾病的发生。</p>
+            <!-- 更多预防性护理相关内容 -->
+        </section>
+        <section id="nutrition">
+            <h2>营养与饮食</h2>
+            <p>确保猫咪摄取均衡的营养，提供高质量的猫粮，避免喂食人类食物。</p>
+            <!-- 更多营养与饮食相关内容 -->
+        </section>
+        <section id="behavior-signs">
+            <h2>行为与疾病征兆</h2>
+            <p>注意猫咪行为的变化，如食欲减退、活力下降可能是疾病的征兆。</p>
+            <!-- 更多行为与疾病征兆相关内容 -->
+        </section>
+        <section id="emergency">
+            <h2>紧急情况处理</h2>
+            <p>了解如何处理猫咪的紧急医疗情况，包括中毒、创伤等。</p>
+            <!-- 更多紧急情况处理相关内容 -->
+        </section>
+        <!-- 更多健康指南相关内容 -->
+    </main>
+    <footer>
+        <p>&copy; 2024 猫咪爱好者社区</p>
+    </footer>
+</body>
+</html>
+<style>
+    /* 导航链接悬停和活动状态的样式 */
+nav a:hover, 
+nav a.active {
+    background-color: #d9c2a5; /* 背景色 */
+    border: 1px solid #5b4c49; /* 深棕色边框 */
+}
+/* 健康指南部分的样式 */
+#preventive-care, #nutrition, #behavior-signs, #emergency {
+    margin-bottom: 20px; /* 与前一个部分的间距 */
+    padding: 20px; /* 内边距 */
+    background: #ffffff; /* 白色背景 */
+    border: 1px solid #5b4c49; /* 深棕色边框 */
+    border-radius: 8px; /* 边框圆角 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 轻微阴影 */
+}
+
+/* 健康指南部分标题的样式 */
+#preventive-care h2, #nutrition h2, #behavior-signs h2, #emergency h2 {
+    color: #5b4c49; /* 深棕色标题 */
+    margin-bottom: 10px; /* 标题与内容之间的间距 */
+}
+
+/* 健康指南部分段落的样式 */
+#preventive-care p, #nutrition p, #behavior-signs p, #emergency p {
+    text-align: justify; /* 文本两端对齐 */
+}
+    /* 全局样式 */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5; /* 浅灰背景 */
+    color: #3d3d3d; /* 深灰文字 */
+}
+
+/* 头部样式 */
+header {
+    background: #fdebd0; /* 莫兰迪黄棕色 */
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    color: #5b4c49; /* 深棕色文字 */
+}
+
+/* 导航样式 */
+nav {
+    background: #fdebd0; /* 与头部背景一致 */
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+nav a {
+    color: #5b4c49; /* 深棕色文字 */
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 5px; /* 圆角边框 */
+    transition: background-color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    background-color: #d9c2a5; /* 较深的莫兰迪黄棕色 */
+}
+
+
+/* 主要内容区域 */
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: #fff; /* 白色背景 */
+    border-radius: 8px; /* 圆角边框 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 轻微阴影 */
+}
+
+section h2 {
+    color: #5b4c49; /* 深棕色标题 */
+    margin-bottom: 0.5rem;
+}
+
+/* 页脚样式 */
+footer {
+    background: #5b4c49; /* 深棕色背景 */
+    color: #fdebd0; /* 黄棕色文字 */
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    nav a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+}
+</style>
+<style>
+    /* styles.css 文件的内容 */
+  
+  /* 全局样式 */
+  html, body {
+      height: 100%;
+      margin: 0;
+  }
+  
+  body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* 确保body占满整个视口高度 */
+  }
+  
+  main {
+      flex: 1; /* 主内容区域占据剩余空间 */
+  }
+  
+  /* 页脚样式 */
+  footer {
+      background: #5b4c49; /* 深棕色背景 */
+      color: #fdebd0; /* 黄棕色文字 */
+      text-align: center;
+      padding: 1rem 0;
+  }
+  </style>

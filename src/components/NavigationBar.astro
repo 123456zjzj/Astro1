@@ -1,0 +1,63 @@
+<a href="/">首页</a>
+<a href="/about/">品种介绍</a>
+<a href="/blog">日常护理</a>
+<a href="/notes/">健康指南</a>
+
+<style>
+    a{
+        color: rgb(8, 131, 148);
+        text-decoration: none;
+        margin-right: 2em;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+    nav {
+    background-color: #23232e;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 5px 10px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 100%; /* Start off the edge */
+    height: 3px; /* Height of the color bar */
+    background-color: #8eb6e6; /* Color of the bar */
+    transition: right 0.3s; /* Animate the width */
+}
+
+nav a:hover::before,
+nav a:focus::before {
+    right: 0; /* Move the bar to be full width on hover/focus */
+}
+
+nav a.active::before {
+    right: 0; /* Bar is full width for active link */
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+    nav a {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+</style>
